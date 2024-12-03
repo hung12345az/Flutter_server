@@ -22,16 +22,16 @@ app.use(
 );
 
 // Kiểm tra biến môi trường Mongo URI
-const mongoUri = process.env.MONGO_URI; // Lấy URI từ biến môi trường
+// const mongoUri = process.env.MONGO_URI; // Lấy URI từ biến môi trường
 
-if (!mongoUri) {
-    console.error("Lỗi: MONGO_URI không được định nghĩa trong file .env");
-    process.exit(1); // Dừng server nếu thiếu URI
-}
+// if (!mongoUri) {
+//     console.error("Lỗi: MONGO_URI không được định nghĩa trong file .env");
+//     process.exit(1); // Dừng server nếu thiếu URI
+// }
 
 // Kết nối MongoDB Atlas (không cần các tùy chọn deprecated nữa)
 mongoose
-    .connect(mongoUri)
+    .connect("mongodb+srv://hung100504:R2BqIV9A5T0FuKsF@cluster0.pvwol.mongodb.net/flutter?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => {
         console.log("Đã kết nối thành công tới MongoDB Atlas");
         processDatabase(); // Gọi hàm sau khi kết nối thành công
