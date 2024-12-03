@@ -6,7 +6,7 @@ const connectDB = async() => {
     try {
         // Ket noi voi mongodb
         await mongoose.connect(
-            "mongodb+srv://an100277:AeeReISLciRp5Aqf@binhan.awftk.mongodb.net/flutter_db?retryWrites=true&w=majority&appName=Cluster0"
+            "mongodb+srv://nkh291103:y8KUP39GaA5B4GEQ@khachung.awftk.mongodb.net/flutter_db?retryWrites=true&w=majority&appName=Cluster0"
         );
         console.log("Connect successfully!!!");
     } catch (error) {
